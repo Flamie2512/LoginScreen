@@ -13,6 +13,7 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //logo
               const SizedBox(height: 50),
@@ -87,22 +88,31 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(width: 100),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white),
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.grey,
+
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [Image.asset('lib/images/google.png', height: 50)],
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('lib/images/google.png', height: 50),
-                    ],
+              ),
+
+              const SizedBox(height: 15),
+
+              //not a member? Register now
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Not a member?'),
+                  SizedBox(width: 5),
+                  Text(
+                    'Register now!',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
+                ],
               ),
             ],
           ),
