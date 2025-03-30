@@ -127,7 +127,7 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text('Not a member?'),
-                    SizedBox(width: 5),
+
                     TextButton(
                       onPressed: () {
                         Navigator.push(
